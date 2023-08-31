@@ -122,6 +122,7 @@ a {
     font-weight: bold;
     max-width: 80%;
     border: none;
+    outline: none;
 }
 
 .header-searchbar-city {
@@ -160,6 +161,8 @@ a {
     gap: 15px;
 }
 
+
+
 .header-filters h2 {
     font-size: 18px;
 }
@@ -181,6 +184,7 @@ a {
 
 .header-filters-row:hover {
     background-color: #deebff;
+    transition: 0.18s;
 }
 
 .header-filters-row:nth-child(2) {
