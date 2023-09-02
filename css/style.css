@@ -403,7 +403,7 @@ a {
 
 @media (max-width: 767.98px) {
     .header-filters-options h2 {
-        font-size: min(max(12px), 14px);
+        font-size: 14px;
         padding-top: max(17px, 34%);
         padding-bottom: max(17px, 34%);
     }
@@ -564,6 +564,8 @@ a {
     font-size: 16px;
 }
 
+
+
 .euro {
     font-weight: 700;
 }
@@ -636,6 +638,7 @@ a {
 
 .populaires-card-subtitle {
     margin: 0;
+    font-size: 14px;
 }
 
 .populaires-card-rating {
@@ -744,6 +747,12 @@ a {
     margin-bottom: 35px;
 }
 
+@media (max-width: 767.98px) {
+    .activites {
+        margin-top: 20px;
+    }}
+
+
 .activites-title {
     padding: 30px;
 }
@@ -774,7 +783,9 @@ a {
         max-height: 200px;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
-}
+    .activites-cards {
+        gap: 15px;
+}}
 
 .activites-card {
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
@@ -810,6 +821,8 @@ a {
 
 .activites-card-content {
     height: 59px;
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 1023.98px) {
@@ -820,7 +833,7 @@ a {
 
 
 .activites-card-txt {
-    padding: 16px 19px;
+    padding: 0 19px;
 }
 
 .activites-card-title {
@@ -829,7 +842,7 @@ a {
 
 @media (max-width: 1023.98px) {
     .activites-card-title {
-        font-size: min(max(14px), 16px);
+        font-size: 16px;
     }
 }
 
@@ -870,9 +883,21 @@ a {
         align-self: flex-end;
         bottom: 0;
         margin-top: 35px;
+        justify-content: space-evenly;
     }
 
     .booki-footer section {
         width: 100%;
+        padding: 30px 0 0 30px;
     }
+}
+
+.booki-footer section:nth-child(1) {
+    border: 2px solid turquoise;}
+
+.booki-footer section:nth-child(2) {
+    border: 2px solid maroon;
+}
+.booki-footer section:nth-child(3) {
+    border: 2px solid hotpink;
 }
