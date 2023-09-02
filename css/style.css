@@ -24,6 +24,8 @@ body {
     width: 100%;
     position: relative;
     overflow-x: hidden;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    text-rendering: optimizeLegibility;
 }
 
 .main-container {
@@ -198,6 +200,14 @@ a {
     margin-bottom: 8px;
 }
 
+@media (max-width: 767.98px) {
+    .header-main-text h1 {
+        font-size: calc(1.13rem + 0.5vw);
+    }
+    .header-subline {
+        font-size: calc(0.96rem + 0.05vw);
+    }
+}      
 
 .header-searchbar {
     display: flex;
@@ -400,7 +410,7 @@ a {
 
 .header-filters-row:hover {
     background-color: #deebff;
-    transition: 0.18s;
+    transition: 0.22s;
 }
 
 .fa-twentytwo {
@@ -410,7 +420,7 @@ a {
 
 @media (max-width: 767.98px) {
     .fa-twentytwo {
-        padding-left: max(19px, 11.77%);
+        padding: 8.09% 5.78% 8.09% 11.04%; 
     }
 }
 
