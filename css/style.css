@@ -273,6 +273,7 @@ a {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     z-index: 2;
+    cursor: pointer;
 }
 
 .header-searchbar-search h2 {
@@ -296,6 +297,7 @@ a {
         font-size: 18px;
         position: absolute;
         visibility: hidden;
+        
     }
 
     .header-searchbar-search {
@@ -312,6 +314,7 @@ a {
     width: 758px;
     height: 50px;
     gap: 15px;
+    cursor: pointer;
 }
 
 
@@ -793,6 +796,11 @@ a {
     border-radius: 20px;
     max-width: 297.5px;
     width: 100%;
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+}
+.activites-card:hover {
+    transform: scale(1.05); 
 }
 
 @media (max-width: 767.98px) {
