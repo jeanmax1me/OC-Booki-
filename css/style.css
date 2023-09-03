@@ -11,8 +11,6 @@
     padding: 0;
     box-sizing: border-box;
     text-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
 
@@ -196,7 +194,7 @@ a {
 .header-main-text h1 {
     font-size: 22px;
     font-weight: bold;
-    text-wrap: balance;
+    overflow-wrap: break-word;
     margin-bottom: 8px;
 }
 
