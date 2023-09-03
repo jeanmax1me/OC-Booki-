@@ -750,7 +750,8 @@ a {
 @media (max-width: 767.98px) {
     .activites {
         margin-top: 20px;
-    }}
+    }
+}
 
 
 .activites-title {
@@ -783,9 +784,11 @@ a {
         max-height: 200px;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
+
     .activites-cards {
         gap: 15px;
-}}
+    }
+}
 
 .activites-card {
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
@@ -877,27 +880,38 @@ a {
 
 @media (max-width: 767.98px) {
     .booki-footer {
+        display: flex;
         flex-direction: column;
         height: 461px;
         width: 100%;
-        align-self: flex-end;
-        bottom: 0;
         margin-top: 35px;
-        justify-content: space-evenly;
+        row-gap: 50px;
+        padding: 30px;
+    }
+
+    .booki-footer ul {
+        justify-content: unset;
+        row-gap: 15px;
     }
 
     .booki-footer section {
         width: 100%;
-        padding: 30px 0 0 30px;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
-}
 
-.booki-footer section:nth-child(1) {
-    border: 2px solid turquoise;}
+    .booki-footer section:nth-child(1) {
+        height: 123px;
+    }
 
-.booki-footer section:nth-child(2) {
-    border: 2px solid maroon;
-}
-.booki-footer section:nth-child(3) {
-    border: 2px solid hotpink;
+    .booki-footer section:nth-child(2) {
+        height: 89px;
+    }
+
+    .booki-footer section:nth-child(3) {
+        height: 89px;
+    }
 }
