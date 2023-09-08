@@ -10,12 +10,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
     text-rendering: optimizeLegibility;
 }
 
 .fa-solid {
     color: var(--main-color);
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 body {
@@ -74,14 +77,49 @@ a {
         margin-bottom: 30px;
     }
 
-    .header-navbar::before {
+    .header-nav-item:nth-child(1)::before {
         content: "";
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 0%;
         width: 50%;
         height: 2px;
         background-color: var(--main-color);
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    .header-nav-item:nth-child(1):hover::before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transition: all 0.3s ease-in-out;
+        transform: scaleX(1);
+    }
+
+    .header-nav-item:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 50%;
+        height: 2px;
+        background-color: var(--main-color);
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    .header-nav-item:nth-child(2):hover::before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transition: all 0.3s ease-in-out;
+        transform: scaleX(1);
+
     }
 }
 
@@ -130,13 +168,13 @@ a {
     display: flex;
 }
 
-.header-nav-item:first-child {
+.header-nav-item:hover {
     color: var(--main-color);
     border-top: 2px solid var(--main-color);
 }
 
 @media (max-width: 767.98px) {
-    .header-nav-item:first-child {
+    .header-nav-item:hover {
         border-top: none;
     }
 }
@@ -274,6 +312,11 @@ a {
     border-bottom-right-radius: 15px;
     z-index: 2;
     cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.header-searchbar-search:hover {
+    opacity: 0.75;
 }
 
 .header-searchbar-search h2 {
@@ -297,7 +340,7 @@ a {
         font-size: 18px;
         position: absolute;
         visibility: hidden;
-        
+
     }
 
     .header-searchbar-search {
@@ -412,7 +455,7 @@ a {
 
 .header-filters-row:hover {
     background-color: #deebff;
-    transition: 0.22s;
+    transition: 0.15s;
 }
 
 .fa-twentytwo {
@@ -504,7 +547,13 @@ a {
     background-color: white;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    transition: 0.2s ease-out;
 }
+
+.hebergements-card:hover {
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+}
+
 
 .hebergements-cards img {
     height: 124px;
@@ -512,6 +561,7 @@ a {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     object-fit: cover;
+    width: 100%;
 }
 
 .hebergements-card-content {
@@ -614,6 +664,7 @@ a {
 .populaires-card {
     display: flex;
     margin-top: 33px;
+    transition: transform 0.2s ease-out;
 }
 
 .populaires-cards img {
@@ -646,8 +697,10 @@ a {
     margin-bottom: 5px;
 }
 
+.populaires-card:hover {
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+}
 
-/* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1023.98px) {
     .hebergements-and-populaires {
         flex-direction: column;
@@ -704,6 +757,7 @@ a {
         gap: 15px;
     }
 
+
     .populaires {
         display: flex;
         flex-direction: column;
@@ -718,6 +772,7 @@ a {
 
     .populaires-card {
         margin-top: 15px;
+        transition: box-shadow 0.3s;
     }
 
     .populaires-cards a {
@@ -797,10 +852,11 @@ a {
     max-width: 297.5px;
     width: 100%;
     transform: scale(1);
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
+
 .activites-card:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 @media (max-width: 767.98px) {
@@ -865,7 +921,7 @@ a {
 }
 
 .booki-footer ul {
- 
+
     height: 100%;
     list-style: none;
     font-size: 16px;
