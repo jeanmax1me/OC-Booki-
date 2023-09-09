@@ -86,15 +86,15 @@ a {
         height: 2px;
         background-color: var(--main-color);
         visibility: hidden;
-        -webkit-transform: scaleX(0);
+
         transform: scaleX(0);
-        -webkit-transition: all 0.3s ease-in-out 0s;
+
         transition: all 0.3s ease-in-out 0s;
     }
 
     .header-nav-item:nth-child(1):hover::before {
         visibility: visible;
-        -webkit-transform: scaleX(1);
+
         transition: all 0.3s ease-in-out;
         transform: scaleX(1);
     }
@@ -108,18 +108,14 @@ a {
         height: 2px;
         background-color: var(--main-color);
         visibility: hidden;
-        -webkit-transform: scaleX(0);
         transform: scaleX(0);
-        -webkit-transition: all 0.3s ease-in-out 0s;
         transition: all 0.3s ease-in-out 0s;
     }
 
     .header-nav-item:nth-child(2):hover::before {
         visibility: visible;
-        -webkit-transform: scaleX(1);
         transition: all 0.3s ease-in-out;
         transform: scaleX(1);
-
     }
 }
 
