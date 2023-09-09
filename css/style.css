@@ -291,6 +291,12 @@ a {
     z-index: 0;
 }
 
+@media (max-width: 767.98px) {
+.header-searchbar input[type="text"] {
+    width: 100%;
+    overflow: visible;
+}}
+
 .header-searchbar-city {
     display: flex;
     align-items: center;
